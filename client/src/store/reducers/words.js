@@ -22,7 +22,6 @@ export const wordsSlice = createSlice({
         state.error = null;
       })
       .addCase(loadWords.fulfilled, (state, { payload }) => {
-        // console.log(payload);
         if (payload) {
           if (!payload.data) {
             state.words = [];

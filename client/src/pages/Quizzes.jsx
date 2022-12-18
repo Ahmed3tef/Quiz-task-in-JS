@@ -57,7 +57,7 @@ const Quizzes = () => {
       {!rankIsLoading && rankError && <ErrorMsg />}
 
       {!rankIsLoading && !rankError && !isNaN(rank) && showRank && <Rank rank={rank} />}
-
+      {/* !isNaN() checks if rank is a number */}
     </div>
   )
 }
