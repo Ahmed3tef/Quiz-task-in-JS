@@ -30,14 +30,6 @@ module.exports = {
         textColor: '#000',
         progressGray: 'rgba(35, 31, 32, 0.15)',
       },
-      fontFamily: {
-        Averia: ['Averia Libre', 'cursive'],
-        Roboto: ['Roboto', 'sans'],
-      },
-      height: {
-        21: '21rem',
-        28: '28rem',
-      },
     },
   },
   plugins: [],

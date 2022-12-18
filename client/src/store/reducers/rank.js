@@ -29,7 +29,6 @@ export const rankSlice = createSlice({
             state.error = payload.message;
             return;
           }
-          console.log(payload);
           state.rank = payload.rank;
           state.isLoading = false;
           state.error = null;
