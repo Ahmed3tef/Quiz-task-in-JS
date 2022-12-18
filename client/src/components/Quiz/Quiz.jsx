@@ -6,14 +6,22 @@ const Quiz = (props) => {
   const inCorrectMsg = 'Incorrect answer 😔';
   const correctMsg = 'Good job 🎉👏';
 
+  // question number state
   const [qNumber, setQNumber] = useState(1)
+  // isSelected to handle showing btns or msg
   const [isSelected, setIsSelected] = useState(false);
+
+  // state to show view results btn.
   const [showResults, setShowResults] = useState(false)
 
+  // msg state
   const [answerStatus, setAnswerStatus] = useState(inCorrectMsg)
 
   const nextQHandler = () => {
+    // to stop increasing number if it reaches the end of qs list.
     if (props.data.length === qNumber) return;
+
+    // increase number and reset other states
 
     setQNumber(prev => prev + 1)
     setIsSelected(false)
@@ -22,7 +30,7 @@ const Quiz = (props) => {
 
   const answerHandler = (e) => {
     setIsSelected(true);
-    // setIsCorrect(e.target.value)
+
     if (e.target.value === props.data[qNumber - 1].pos) {
       setAnswerStatus(correctMsg);
       props.setScore(prev => prev + 10);
