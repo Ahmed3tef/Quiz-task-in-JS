@@ -44,7 +44,9 @@ const Quiz = (props) => {
       </div>
 
       <div className="q-body">
+
         <p className='q-word'>{props.data[qNumber - 1]?.word}</p>
+
         <div className='flex gap-8'>
           {!isSelected && ['Noun', 'Adverb', 'Adjective', 'Verb'].map((e, i) =>
             <button type="button" key={i}
@@ -54,13 +56,17 @@ const Quiz = (props) => {
           )}
           {isSelected && <p>{answerStatus}</p>}
         </div>
+
       </div>
+
       <ProgressBar progress={qNumber} />
+
       <div className="q-footer">
         <div className="q-number">Q {qNumber} / {props.data.length || 10}</div>
         {!showResults && <button type="button" className='q-cta ' onClick={nextQHandler}>Next</button>}
         {showResults && <button type="button" className='q-cta ' onClick={props.fetchRankHandler}>View results</button>}
       </div>
+
     </div>
   )
 }

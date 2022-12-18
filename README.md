@@ -1,4 +1,4 @@
-# Quiz-task-in-JS
+# Quiz-task-in-JS.
 
 - To start the app open terminal in main file and do these steps in order:
 
@@ -17,3 +17,15 @@
 - at this point our server is running.
 
 - then you can open the app with link specified in terminal by vite.
+
+---
+
+- Technologies used:
+
+- Vite
+- React
+- React Router
+- Redux
+- Axios
+- Scss
+- TailwindCSS
