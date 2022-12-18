@@ -17,6 +17,9 @@ const Quiz = (props) => {
   // msg state
   const [answerStatus, setAnswerStatus] = useState(inCorrectMsg)
 
+  // correct answers state
+  const [correctAnswers, setCorrectAnswers] = useState(0)
+
   const nextQHandler = () => {
     // to stop increasing number if it reaches the end of qs list.
     if (props.data.length === qNumber) return;
@@ -29,20 +32,29 @@ const Quiz = (props) => {
   }
 
   const answerHandler = (e) => {
+    // to show msg instead of btns 
     setIsSelected(true);
 
+    // i stored the value of q answer in btn value and here I check for equality
     if (e.target.value === props.data[qNumber - 1].pos) {
       setAnswerStatus(correctMsg);
-      props.setScore(prev => prev + 10);
-      return
+      // increase correct answers
+      setCorrectAnswers(prev => prev + 1);
+
     }
   }
 
   useEffect(() => {
+    // when reaches the final q show view results btn
     if (props.data.length === qNumber) {
       setShowResults(true)
     };
   }, [qNumber])
+
+  useEffect(() => {
+    // set score 
+    props.setScore(correctAnswers / props.data.length * 100);
+  }, [correctAnswers])
 
   return (
     <div className="questions-container">
@@ -58,7 +70,9 @@ const Quiz = (props) => {
         <div className='flex gap-8'>
           {!isSelected && ['Noun', 'Adverb', 'Adjective', 'Verb'].map((e, i) =>
             <button type="button" key={i}
-              className='q-answer' value={e.toLowerCase()} disabled={isSelected && e.toLowerCase() !== answer} onClick={(event) => answerHandler(event)}>
+              className='q-answer'
+              value={e.toLowerCase()}
+              onClick={(event) => answerHandler(event)}>
               {e}
             </button>
           )}

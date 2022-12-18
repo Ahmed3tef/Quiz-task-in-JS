@@ -34,7 +34,7 @@ const Quizzes = () => {
     dispatch(loadRank({ score }));
   }
 
-  // console.log(words);
+
 
   return (
     <div className="page-layout">
