@@ -1,4 +1,4 @@
-// i put outside the getRank controller to be like a database (each time i add a score it keeps it) (saved in cash if server restarted it will be lost).
+// i put outside the getRank controller to be like a database (each time i add a score it keeps it) (saved in cash if server restarted added new data will be lost).
 
 const dummy_ranks = [
   20, 90, 100, 50, 10, 50, 60, 0, 60, 10, 90, 30, 100, 30, 20, 90, 40, 20, 10,
