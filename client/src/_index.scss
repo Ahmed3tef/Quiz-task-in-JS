@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-mx {
+    @apply container mx-auto p-6;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .hovering {
+    @apply transition-all duration-200;
+  }
+
+  .spinner {
+    @apply flex-center h-full w-full;
+  }
+
+  .page-layout {
+    @apply flex-center h-[100vh] w-[100vw] bg-bodyBg text-textColor;
+  }
+
+  .q-answer {
+    @apply hovering rounded-md bg-alt px-[3rem] py-[1.2rem] text-white hover:bg-btnHover;
+  }
+  .q-cta {
+    @apply q-answer rounded-full py-3;
+  }
+  .q-footer {
+    @apply flex-center w-full justify-between p-[2rem];
+  }
+  .q-body {
+    @apply flex-center  w-full flex-col  gap-16 p-[2rem]  py-[4rem];
+  }
+  .q-word {
+    @apply text-[3.5rem];
+  }
+  .q-title {
+    @apply w-full  border-b-2 p-[2rem];
+  }
+  .questions-container {
+    @apply flex min-h-[30rem] w-[80rem] flex-col overflow-hidden rounded-lg bg-mainGrey opacity-95 shadow-lg;
+  }
+  .rank-container {
+    @apply flex-center h-[40rem] w-[60rem] flex-col  gap-[3rem] rounded-lg bg-mainGrey text-[2.2rem] shadow-lg;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 1540px) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: cursive, sans-serif;
+}
+main {
+  min-height: 100vh;
+}
+button,
+button:focus {
+  border: none;
+  outline: none;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+}

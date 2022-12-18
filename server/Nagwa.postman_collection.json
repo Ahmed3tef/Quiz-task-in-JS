@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "5df52e1a-cd35-4f86-852b-e21f73e58e79",
+		"name": "Nagwa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18282574"
+	},
+	"item": [
+		{
+			"name": "words",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "rank",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "mainUrl",
+			"value": "http://localhost:5050",
+			"type": "string"
+		}
+	]
+}
